@@ -63,9 +63,24 @@ vim.api.nvim_set_keymap('n', 'p', "p=`]", { noremap = true })
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
-vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+vim.keymap.set('n', '<Esc>', '<cmd>noh<CR>', { noremap = true, silent = true })
 
 
 vim.keymap.set("n", "<leader><leader>", function ()
   require("telescope").extensions.smart_open.smart_open()
 end, { noremap = true, silent = true })
+
+
+
+-- Terminal window navigation key mappings
+vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', {noremap = true})
+vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-N><C-w>j', {noremap = true})
+vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-N><C-w>k', {noremap = true})
+vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', {noremap = true})
+
+
+
+
+
+
