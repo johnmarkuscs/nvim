@@ -1,17 +1,14 @@
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
-
 -- Move visual mode selected lines up/down using J/K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
-
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 
 -- Leader + p to paste copied word over another word
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -43,7 +40,7 @@ vim.keymap.set('n', '<C-a>', 'ggVG', opts);
 --vim.keymap.set("n", ":", "<cmd>Telescope resume<cr>", opts)
 
 vim.keymap.set("n", "[c", function()
-  require("treesitter-context").go_to_context(vim.v.count1)
+    require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
 
 
@@ -56,7 +53,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = tr
 vim.keymap.set("n", "\\", ":split<CR>", { desc = "Open new split horizontally", silent = true })
 vim.keymap.set("n", "|", ":vsplit<CR>", { desc = "Open new split vertically", silent = true })
 
-vim.api.nvim_set_keymap('n', ';', ':', { noremap = true })
+vim.keymap.set({'n','x'}, ':', ';', { noremap = true})
+
 
 vim.api.nvim_set_keymap('n', 'p', "p=`]", { noremap = true })
 
@@ -67,10 +65,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>noh<CR>', { noremap = true, silent = true })
 
 
 vim.keymap.set("n", "<leader><leader>", function ()
-  require("telescope").extensions.smart_open.smart_open()
+    require("telescope").extensions.smart_open.smart_open()
 end, { noremap = true, silent = true })
-
-
 
 -- Terminal window navigation key mappings
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', { noremap = true, silent = true })
@@ -78,6 +74,22 @@ vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', {noremap = true})
 vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-N><C-w>j', {noremap = true})
 vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-N><C-w>k', {noremap = true})
 vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', {noremap = true})
+
+-- Copy to system clipboard
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', {noremap = true})
+
+vim.api.nvim_set_keymap('n', 'L', '$', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'H', '^', { noremap = true, silent = true })
+
+
+
+
+
+
+
+
+
+
 
 
 
