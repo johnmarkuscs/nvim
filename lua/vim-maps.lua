@@ -71,7 +71,6 @@ vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', {noremap = true})
 -- Copy to system clipboard
 vim.api.nvim_set_keymap('v', '<leader>y', '"+y', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
 
 vim.api.nvim_set_keymap('n', 'L', '$', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'H', '^', { noremap = true, silent = true })

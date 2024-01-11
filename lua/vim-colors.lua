@@ -7,5 +7,4 @@ local colors = {
 }
 M.colors = colors
 
-
 return M
