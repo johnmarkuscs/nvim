@@ -45,6 +45,7 @@ return {
           "gomod",
           "gowork",
           "gosum",
+          "java",
         },
         incremental_selection = {
           enable = true,

@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- Move visual mode selected lines up/down using J/K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -52,10 +52,12 @@ vim.keymap.set("n", "|", ":vsplit<CR>", { desc = "Open new split vertically", si
 
 vim.api.nvim_set_keymap('n', 'p', "p=`]", { noremap = true })
 
+-- Better indenting in visual mode
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
-vim.keymap.set('n', '<Esc>', '<cmd>noh<CR>', { noremap = true, silent = true })
+-- Clear /search highlight
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader><leader>", function ()
     require("telescope").extensions.smart_open.smart_open()
@@ -83,17 +85,14 @@ vim.api.nvim_set_keymap('x', ';', ':', { noremap = true })
 -- Use delete key to switch between last buffers quckly.
 vim.keymap.set("n", "<BS>", ":b#<CR>", { silent=true })
 
-vim.keymap.set("n", "+", ":vertical resize +5<CR>")
 vim.keymap.set("n", "_", ":vertical resize -5<CR>")
-vim.keymap.set("n", "=", ":resize +5<CR>")
-vim.keymap.set("n", "-", ":resize -5<CR>")
+vim.keymap.set("n", "+", ":vertical resize +5<CR>")
+--vim.keymap.set("n", "=", ":resize +5<CR>")
+--vim.keymap.set("n", "-", ":resize -5<CR>")
 
 -- Navigate buffers
 vim.keymap.set("n", "<Right>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<Left>", ":bprevious<CR>", opts)
 
-
-
-
-
+-- Close Buffers
 
