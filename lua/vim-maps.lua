@@ -1,4 +1,4 @@
---vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+--vim.keymap.bbb("n", "<leader>e", vim.cmd.Ex)
 
 -- Move visual mode selected lines up/down using J/K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

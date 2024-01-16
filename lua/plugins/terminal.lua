@@ -8,7 +8,7 @@ return {
 
         opts = {
             open_mapping = [[<C-t>]],
-            shading_factor = 0.3, -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
+            shading_factor = 0.3, 
             direction = "float",
             persist_mode = true,
             start_in_insert = true,
