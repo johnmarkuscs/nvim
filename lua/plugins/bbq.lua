@@ -14,6 +14,7 @@ return {
                 normal = { fg = "#dbaf7b", bold = false },
                 basename = { bold = false },
             },
+         attach_navic = false,
         })
     end,
 }
